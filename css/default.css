@@ -1,0 +1,61 @@
+/* General Demo Style */
+@charset "UTF-8";
+
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body, html { font-size: 100%; padding: 0; margin: 0; height: 100%; }
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+body {
+	font-family: 'Amatic SC', cursive;
+	color: #fff;
+	background: #333;
+}
+
+a {
+	color: #000;
+	color: rgba(0,0,0,0.5);
+	text-decoration: none;
+}
+
+a:hover,
+a:active {
+	color: #fff;
+}
+
+.container {
+	height: 100%;
+}
+
+/* To Navigation Style */
+.codrops-top {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 0.69em;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.codrops-top a {
+	letter-spacing: 1px;
+	display: block;
+	padding: 0 1em 1em;
+}
+
+
+.codrops-icon:hover:before {
+	border-color: #fff;
+} 
+
+.codrops-icon-drop:before {
+	content: "\e001";
+}
+
+.codrops-icon-prev:before {
+	content: "\e004";
+}
+
