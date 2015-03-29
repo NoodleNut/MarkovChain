@@ -185,7 +185,31 @@
 	font-size: 0.5em;
 	font-weight: 300;
 	background: none;
+}
+
+.R_text:focus {
+    
 	background-color: rgba(0,0,0,0.4);
+}
+
+::-webkit-input-placeholder {
+   text-decoration: underline;
+    text-decoration-color: green;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+      text-decoration: underline;
+    text-decoration-color: green;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+      text-decoration: underline;
+    text-decoration-color: green;
+}
+
+:-ms-input-placeholder {  
+      text-decoration: underline;
+    text-decoration-color: green;
 }
 
 .butt {
@@ -199,8 +223,12 @@
 	color:white;
 	font-family:'Roboto', sans-serif;
 	text-align: center;
-	min-width: 400px;
 	font-size: 0.4em;
 	font-weight: 400;
 	background-color: #1abc89;
+    transition: all 0.3s ease 0s;
+}
+
+.butt:hover {
+    background-color: #1adc89;
 }
