@@ -9,7 +9,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'> 
 		<link rel="stylesheet" type="text/css" href="css/default.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<link href="css/style.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -41,7 +41,7 @@
 
 			<div>
 			<input type = 'text' id = 'R_value' class = "R_text" placeholder='Enter an R value'>
-			<button class = 'butt' onclick='passData()'>FILL IN THE MATRIX AND CLICK ME</button>
+			<button class = 'butt' onclick='CreateGraph()'>FILL IN THE MATRIX AND CLICK ME</button>
 			</div>
 
 			</div>
@@ -78,11 +78,11 @@
 			</div>
 
 
-
+		<div id="cy"></div>
 
 		</div><!-- /container -->
 
-		<div id="cy"></div>
+		
 		<!-- classie.js by @desandro: https://github.com/desandro/classie -->
 		<script src="js/classie.js"></script>
 		<script src="js/gridSelector.js"></script>
@@ -95,7 +95,7 @@
 			} );
 		</script>
         <script>
-            document.getElementById("R_value").onchange(xyz);
+            //document.getElementById("R_value").onchange(xyz);
             
             function xyz() {
                 
