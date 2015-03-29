@@ -1,3 +1,8 @@
+function xyz() {
+    document.getElementById("gt-grid").style.display = "none";
+    document.getElementById("page2").style.display = "block";
+}
+
 function passData() {
 
 
@@ -37,8 +42,10 @@ function passData() {
 
     MarkovChain = new MarkovChain(matrix);
     MarkovChain.calculate();
+    xyz();
     CreateGraph();
 }
+
 
 
 
