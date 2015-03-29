@@ -6,8 +6,10 @@
 body, html { font-size: 100%; padding: 0; margin: 0; height: 100%; }
 
 /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+/*
 .clearfix:before, .clearfix:after { content: " "; display: table; }
 .clearfix:after { clear: both; }
+*/
 
 body {
 	font-family: 'Amatic SC', cursive;
