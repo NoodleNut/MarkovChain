@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400);
 
 /* Grid style; make sure parent containers have full height */
 .gt-grid {
@@ -157,7 +158,8 @@
 	color: #fff;
 	font-size:5em;
 	font-family: 'Amatic SC', cursive;
-	text-align: center;
+	text-align: auto;
+    float: left;
 }
 
 .title {
@@ -172,13 +174,33 @@
 .R_text {
 
 	margin-bottom: 10px;
-	background-color: rgba(0,0,0,0.4);
 	outline:0;
 	border-width: 0;
 	line-height: 2em;
 	color:white;
-	font-family:'Amatic SC', cursive;
+	font-family:'Roboto', sans-serif;
 	border-radius: 25px;
 	text-align: center;
+	min-width: 400px;
+	font-size: 0.5em;
+	font-weight: 300;
+	background: none;
+	background-color: rgba(0,0,0,0.4);
+}
 
+.butt {
+	margin-bottom: 10px;
+    margin-left: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+	outline:0;
+	border-width: 0;
+	line-height: 2em;
+	color:white;
+	font-family:'Roboto', sans-serif;
+	text-align: center;
+	min-width: 400px;
+	font-size: 0.4em;
+	font-weight: 400;
+	background-color: #1abc89;
 }

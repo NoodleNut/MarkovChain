@@ -39,7 +39,10 @@
 
 			</h1>
 
+			<div>
 			<input type = 'text' id = 'R_value' class = "R_text" placeholder='Enter an R value'>
+			<button class = 'butt' onclick='passData()'>FILL IN THE MATRIX AND CLICK ME</button>
+			</div>
 
 			</div>
 
@@ -74,9 +77,6 @@
 				
 			</div>
 
-			<div>
-			<button class = 'butt' onclick='passData()'>Submit</button>
-			</div>
 
 
 
@@ -94,5 +94,12 @@
 				delay: 20
 			} );
 		</script>
+        <script>
+            document.getElementById("R_value").onchange(xyz);
+            
+            function xyz() {
+                
+            };
+        </script>
 	</body>
 </html>
