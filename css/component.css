@@ -34,10 +34,10 @@
 	background: rgba(0,0,0,0.05);
 }
 
-.gt-grid > div.gt-hidden {
+/*.gt-grid > div.gt-hidden {
 	opacity: 0;
 	visibility: hidden;
-}
+}*/
 
 .gt-grid > div.gt-visible {
 	z-index: 999;
@@ -232,3 +232,4 @@
 .butt:hover {
     background-color: #1adc89;
 }
+
