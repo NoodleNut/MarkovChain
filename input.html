@@ -1,110 +1,184 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<title>Markov Chain</title>
-		
-		<link rel="shortcut icon" href="../favicon.ico">
-		<link href='http://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'> 
-		<link rel="stylesheet" type="text/css" href="css/default.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markov Chain</title>
+
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link href='http://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/default.css" />
+  <link rel="stylesheet" type="text/css" href="css/component.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
 
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-		<script src="js/modernizr.custom.js"></script>
-		<script src="http://www.numericjs.com/lib/numeric-1.2.6.js"></script>
-		<script src="http://cytoscape.github.io/cytoscape.js/api/cytoscape.js-latest/cytoscape.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="js/modernizr.custom.js"></script>
+  <script src="http://www.numericjs.com/lib/numeric-1.2.6.js"></script>
+  <script src="http://cytoscape.github.io/cytoscape.js/api/cytoscape.js-latest/cytoscape.min.js"></script>
 
-		<script src="js/extractInput.js"></script>
+  <script src="js/extractInput.js"></script>
 
-	</head>
-	<body>
-		<div class="container demo-3">
-			<div id="gt-grid-selector" class="gt-grid-control">
-				<span class="gt-grid-icon"></span>
-				<div class="gt-grid-select">
-					<div></div><div></div><div></div><div></div><div></div>
-					<div></div><div></div><div></div><div></div><div></div>
-					<div></div><div></div><div></div><div></div><div></div>
-					<div></div><div></div><div></div><div></div><div></div>
-					<div></div><div></div><div></div><div></div><div></div>
-				</div>
-			</div>
+</head>
 
-			<div class = 'title'>
-			<h1>
+<body>
+  <div class="container demo-3 parallax">
+    <div id="gt-grid-selector" class="gt-grid-control">
+      <span class="gt-grid-icon"></span>
+      <div class="gt-grid-select">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div class='title'>
+      <h1>
 			WELCOME TO T.E.D.D!!!!
 
 			</h1>
 
-			<div>
-<<<<<<< HEAD
-			<input type = 'text' id = 'R_value' class = "R_text" placeholder='Enter an R value'>
-			<button class = 'butt' onclick='CreateGraph()'>FILL IN THE MATRIX AND CLICK ME</button>
-=======
-			<input type = 'text' id = 'R_value' class = "R_text" placeholder='1. Enter an R value'>
-			<button class = 'butt' onclick='passData()'>CALCULATE!</button>
->>>>>>> 678010314949d009c6b23172c3391ce72236dc5c
-			</div>
+      <div>
+        <input type='text' id='R_value' class="R_text" placeholder='1. Enter an R value'>
+        <div class="step2">2. Fill in the matrix</div>
+        <button class='butt' onclick='xyz(); passData()'>3. CALCULATE!</button>
+      </div>
 
-			</div>
+    </div>
 
 
-			<div id="gt-grid" class="gt-grid">
-				<div><h3><input type ='text' id="0" class="textbox"></h3></div>
-				<div><h3><input type ='text' id="1" class="textbox"></h3></div>
-				<div><h3><input type ='text' id="2" class="textbox"></h3></div>
-				<div><h3><input type ='text' id="3" class="textbox"></h3></div>
-				<div><h3><input type ='text' id="4" class="textbox"></h3></div>
-				<div><h3><input type ='text' id="5" class="textbox"></h3></div>
-				<div><h3><input type ='text' id="6" class="textbox"></h3></div>
-				<div><h3><input type ='text' id="7" class="textbox"></h3></div>
-				<div><h3><input type ='text' id="8" class="textbox"></h3></div>
-				<div><h3><input type ='text' id="9" class="textbox"></h3></div>
-				<div><h3><input type ='text' id="10" class="textbox"></h3></div>
-				<div><h3><input type ='text' id="11" class="textbox"></h3></div>
-				<div><h3><input type ='text' id="12" class="textbox"></h3></div>
-				<div><h3><input type ='text' id="13" class="textbox"></h3></div>
-				<div><h3><input type ='text' id="14" class="textbox"></h3></div>
-				<div><h3><input type ='text' id="15" class="textbox"></h3></div>
-				<div><h3><input type ='text' id="16" class="textbox"></h3></div>
-				<div><h3><input type ='text' id="17" class="textbox"></h3></div>
-				<div><h3><input type ='text' id="18" class="textbox"></h3></div>
-				<div><h3><input type ='text' id="19" class="textbox"></h3></div>
-				<div><h3><input type ='text' id="20" class="textbox"></h3></div>
-				<div><h3><input type ='text' id="21" class="textbox"></h3></div>
-				<div><h3><input type ='text' id="22" class="textbox"></h3></div>
-				<div><h3><input type ='text' id="23" class="textbox"></h3></div>
-				<div><h3><input type ='text' id="24" class="textbox"></h3></div>
+    <div id="gt-grid" class="gt-grid parallax__layer--base">
+      <div>
+        <h3><input type ='text' id="0" class="textbox"></h3>
+      </div>
+      <div>
+        <h3><input type ='text' id="1" class="textbox"></h3>
+      </div>
+      <div>
+        <h3><input type ='text' id="2" class="textbox"></h3>
+      </div>
+      <div>
+        <h3><input type ='text' id="3" class="textbox"></h3>
+      </div>
+      <div>
+        <h3><input type ='text' id="4" class="textbox"></h3>
+      </div>
+      <div>
+        <h3><input type ='text' id="5" class="textbox"></h3>
+      </div>
+      <div>
+        <h3><input type ='text' id="6" class="textbox"></h3>
+      </div>
+      <div>
+        <h3><input type ='text' id="7" class="textbox"></h3>
+      </div>
+      <div>
+        <h3><input type ='text' id="8" class="textbox"></h3>
+      </div>
+      <div>
+        <h3><input type ='text' id="9" class="textbox"></h3>
+      </div>
+      <div>
+        <h3><input type ='text' id="10" class="textbox"></h3>
+      </div>
+      <div>
+        <h3><input type ='text' id="11" class="textbox"></h3>
+      </div>
+      <div>
+        <h3><input type ='text' id="12" class="textbox"></h3>
+      </div>
+      <div>
+        <h3><input type ='text' id="13" class="textbox"></h3>
+      </div>
+      <div>
+        <h3><input type ='text' id="14" class="textbox"></h3>
+      </div>
+      <div>
+        <h3><input type ='text' id="15" class="textbox"></h3>
+      </div>
+      <div>
+        <h3><input type ='text' id="16" class="textbox"></h3>
+      </div>
+      <div>
+        <h3><input type ='text' id="17" class="textbox"></h3>
+      </div>
+      <div>
+        <h3><input type ='text' id="18" class="textbox"></h3>
+      </div>
+      <div>
+        <h3><input type ='text' id="19" class="textbox"></h3>
+      </div>
+      <div>
+        <h3><input type ='text' id="20" class="textbox"></h3>
+      </div>
+      <div>
+        <h3><input type ='text' id="21" class="textbox"></h3>
+      </div>
+      <div>
+        <h3><input type ='text' id="22" class="textbox"></h3>
+      </div>
+      <div>
+        <h3><input type ='text' id="23" class="textbox"></h3>
+      </div>
+      <div>
+        <h3><input type ='text' id="24" class="textbox"></h3>
+      </div>
 
-				
-			</div>
+
+    </div>
+
+    <div class="parallax__layer--back" id="page2" style="display:none;">
+      <h2>Yolo mode</h2>
+    </div>
+    <!--   <div id="cy"></div>-->
+
+  </div>
+  <!-- /container -->
 
 
-		<div id="cy"></div>
+  <!-- classie.js by @desandro: https://github.com/desandro/classie -->
+  <script src="js/classie.js"></script>
+  <script src="js/gridSelector.js"></script>
+  <script src="js/grid.js"></script>
+  <script>
+    Grid.init({
+      transition: true,
+      speed: 450,
+      delay: 20
+    });
+  </script>
+  <script>
+    //document.getElementById("R_value").onchange(xyz);
 
-		</div><!-- /container -->
+    function xyz() {
+      document.getElementById("gt-grid").style.display = "none";
+      document.getElementById("page2").style.display = "block";
+    };
+  </script>
+</body>
 
-		
-		<!-- classie.js by @desandro: https://github.com/desandro/classie -->
-		<script src="js/classie.js"></script>
-		<script src="js/gridSelector.js"></script>
-		<script src="js/grid.js"></script>
-		<script>
-			Grid.init( {
-				transition : true,
-				speed : 450,
-				delay: 20
-			} );
-		</script>
-        <script>
-            //document.getElementById("R_value").onchange(xyz);
-            
-            function xyz() {
-                
-            };
-        </script>
-	</body>
 </html>
